@@ -4,6 +4,7 @@ namespace GuzzleHttp;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Promise;
 use GuzzleHttp\Psr7;
+use http\Env\Request;
 use Psr\Http\Message\UriInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -104,6 +105,7 @@ class Client implements ClientInterface
     public function send(RequestInterface $request, array $options = [])
     {
         $options[RequestOptions::SYNCHRONOUS] = true;
+        $options[RequestOptions::TIMEOUT] = 5;
         return $this->sendAsync($request, $options)->wait();
     }
 
