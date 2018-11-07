@@ -4,7 +4,6 @@ namespace GuzzleHttp;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Promise;
 use GuzzleHttp\Psr7;
-use http\Env\Request;
 use Psr\Http\Message\UriInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
