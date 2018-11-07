@@ -8,6 +8,7 @@ use Psr\Http\Message\UriInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
+
 /**
  * @method ResponseInterface get(string|UriInterface $uri, array $options = [])
  * @method ResponseInterface head(string|UriInterface $uri, array $options = [])
