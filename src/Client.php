@@ -104,6 +104,7 @@ class Client implements ClientInterface
     public function send(RequestInterface $request, array $options = [])
     {
         $options[RequestOptions::SYNCHRONOUS] = true;
+        $options[RequestOptions::TIMEOUT] = 5;
         return $this->sendAsync($request, $options)->wait();
     }
 
